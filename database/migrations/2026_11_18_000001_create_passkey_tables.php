@@ -25,7 +25,7 @@ return new class() extends Migration
             $table->timestamp('quarantined_at')->nullable();
             $table->timestamp('last_used_at')->nullable();
             $table->timestamps();
-            $table->index(['authenticatable_type', 'authenticatable_id']);
+            $table->index(['authenticatable_type', 'authenticatable_id'], 'passkey_credentials_authenticatable_index');
         });
     }
 
